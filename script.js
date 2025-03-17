@@ -51,7 +51,7 @@ function loadLeaderboard() {
 
     paginatedData.forEach(entry => {
         const row = `<tr>
-            <td>${entry.serial No}</td>
+            <td>${entry.serial}</td>
             <td>${entry.company}</td>
             <td>${entry.contribution}</td>
             <td>${entry.points}</td>
