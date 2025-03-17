@@ -65,6 +65,71 @@ body {
     margin-bottom: 20px;
 }
 
+/* Main Content */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
+}
+.hidden {
+    display: none;
+}
+
+/* Certificate Section */
+#certificate {
+            background-color: White;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: auto;
+            margin-left:20px;
+         
+         
+        }
+      
+        .download-button {
+            background-color: #e76f51;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+/* Leaderboard */
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+.leaderboard-table th, .leaderboard-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.leaderboard-table th {
+    background-color: #40916c;
+    color: white;
+}
+.pagination {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.pagination button {
+    padding: 5px 10px;
+    background-color: #40916c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.pagination button:hover {
+    background-color: #52b788;
+}
+
+
 /* Animations */
 .animated-heading {
     animation: fadeIn 1.5s ease-in-out;
@@ -154,5 +219,14 @@ body {
     }
     .content-section {
         padding: 15px;
+    }
+    .main-content {
+        margin-left: 220px;
+    }
+        .impact-container {
+        flex-direction: column;
+    }
+    .impact-text-section, .impact-bars-section {
+        width: 100%;
     }
 }
