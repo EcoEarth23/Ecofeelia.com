@@ -75,28 +75,36 @@
         </section>
 
         <section id="certificate" class="content-section hidden">
-            <img src="certificate.jpg" alt="Certificate" class="section-image">
             <h2>Sharable Certificate</h2>
-            <p>Download your personalized appreciation certificate.</p>
+            <p>Download your personalized appreciation certificate for your eco-friendly efforts.</p>
             <button onclick="downloadCertificate()" class="download-button">Download Certificate</button>
         </section>
 
         <section id="leaderboard" class="content-section hidden">
-            <img src="leaderboard.jpg" alt="Leaderboard" class="section-image">
-            <h3 class="animated-heading">🏆 Leaderboard</h3>
-            <table class="leaderboard-table">
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Company</th>
-                        <th>Points</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>1</td><td>GreenTech</td><td>250</td></tr>
-                    <tr><td>2</td><td>EcoLife</td><td>230</td></tr>
-                </tbody>
-            </table>
+            <h3>🏆 Leaderboard</h3>
+            <div class="leaderboard-container">
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>Serial No</th>
+                            <th>Company Name</th>
+                            <th>Contribution</th>
+                            <th>Points</th>
+                            <th>Position</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                        <!-- Leaderboard data (First Page) -->
+                        <tr><td>1</td><td>GreenTech</td><td>1000</td><td>250</td><td>🥇</td></tr>
+                        <tr><td>2</td><td>EcoLife</td><td>900</td><td>230</td><td>🥈</td></tr>
+                        <tr><td>3</td><td>Nature Co.</td><td>850</td><td>220</td><td>🥉</td></tr>
+                        <tr><td>4</td><td>Planet Savers</td><td>800</td><td>210</td><td>4️⃣</td></tr>
+                        <tr><td>5</td><td>Sustainable Works</td><td>750</td><td>200</td><td>5️⃣</td></tr>
+                      <tr><td>5</td><td>Sustainable Works</td><td>750</td><td>200</td><td>5️⃣</td></tr>
+                      <tr><td>5</td><td>Sustainable Works</td><td>750</td><td>200</td><td>5️⃣</td></tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <section id="login" class="content-section hidden">
