@@ -212,6 +212,11 @@ body {
     .content-section {
         padding: 15px;
     }
-   
+    .impact-container {
+        flex-direction: column;
+     }
+     .impact-text-section, .impact-bars-section {
+         width: 100%;
+     }
     
 }
