@@ -116,6 +116,21 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
+.pagination {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.pagination button {
+    padding: 5px 10px;
+    background-color: #40916c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.pagination button:hover {
+    background-color: #52b788;
+}
 
 /* Animations */
 .animated-heading {
