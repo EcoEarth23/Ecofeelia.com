@@ -212,9 +212,7 @@ body {
     .content-section {
         padding: 15px;
     }
-    .main-content {
-        margin-left: 220px;
-    }
+   
         .impact-container {
         flex-direction: column;
     }
