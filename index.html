@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Impact Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="dashboard-title">Eco Dashboard</h2>
+        <nav>
+            <button onclick="showSection('impact')" class="sidebar-button">Your Impact</button>
+            <button onclick="showSection('certificate')" class="sidebar-button">Sharable Certificate</button>
+            <button onclick="showSection('leaderboard')" class="sidebar-button">Leaderboard</button>
+            <button onclick="showSection('login')" class="sidebar-button">Login</button>
+        </nav>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <section id="impact" class="content-section hidden">
+            <div class="impact-container">
+                <div class="impact-text-section">
+                    <h3 class="section-heading">🌱 Your Contribution Matters!</h3>
+                    <p class="greeting">
+                        We're thrilled to have you here! This dashboard is your personalized space to explore the positive changes you're making.<br>
+                        Dive into your achievements, track your progress, and discover how your efforts are contributing to a sustainable future. Together,<br>
+                        we can make a difference!<br>
+                        Thank you for being part of this journey!
+                    </p>
+                </div>
+                <div class="impact-bars-section">
+                    <h3 class="bar-heading">Your Achievements</h3>
+                    <div class="bar-container">
+                        <h4 class="bar-title">Trees Saved</h4>
+                        <div class="bar">
+                            <div class="progress trees" data-width="75%">
+                                <span class="bar-percentage">75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-container">
+                        <h4 class="bar-title">CO₂ Reduced</h4>
+                        <div class="bar">
+                            <div class="progress carbon" data-width="85%">
+                                <span class="bar-percentage">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-container">
+                        <h4 class="bar-title">Plastic Rescued</h4>
+                        <div class="bar">
+                            <div class="progress plastic" data-width="50%">
+                                <span class="bar-percentage">50%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-container">
+                        <h4 class="bar-title">Local Artisan Support</h4>
+                        <div class="bar">
+                            <div class="progress artisian" data-width="81%">
+                                <span class="bar-percentage">81%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+                <section id="certificate" class="content-section hidden">
+            <h2>Sharable Certificate</h2>
+            <p>Download your personalized appreciation certificate for your eco-friendly efforts.</p>
+            <button onclick="downloadCertificate()" class="download-button">Download Certificate</button>
+        </section>
+        
+                <section id="leaderboard" class="content-section hidden">
+            <h3>🏆 Leaderboard</h3>
+            <div class="leaderboard-container">
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>Serial No</th>
+                            <th>Company Name</th>
+                            <th>Contribution</th>
+                            <th>Points</th>
+                            <th>Position</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                        <!-- Leaderboard data (First Page) -->
+                        <tr><td>1</td><td>GreenTech</td><td>1000</td><td>250</td><td>🥇</td></tr>
+                        <tr><td>2</td><td>EcoLife</td><td>900</td><td>230</td><td>🥈</td></tr>
+                        <tr><td>3</td><td>Nature Co.</td><td>850</td><td>220</td><td>🥉</td></tr>
+                        <tr><td>4</td><td>Planet Savers</td><td>800</td><td>210</td><td>4️⃣</td></tr>
+                        <tr><td>5</td><td>Sustainable Works</td><td>750</td><td>200</td><td>5️⃣</td></tr>
+                      <tr><td>5</td><td>Sustainable Works</td><td>750</td><td>200</td><td>5️⃣</td></tr>
+                      <tr><td>5</td><td>Sustainable Works</td><td>750</td><td>200</td><td>5️⃣</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section id="login" class="content-section hidden">
+            <h2>Login</h2>
+            <p>Access your account and track your impact over time.</p>
+        </section>
+    </main>
+
+    
+</body>
+</html>
