@@ -36,23 +36,7 @@ function downloadCertificate() {
 window.open(certificateUrl, "_blank");
         
         // Leaderboard Data (Example)
-const leaderboardData = [
-    { rank: 1, company: "GreenTech", contribution: 1000, points: 250 },
-    { rank: 2, company: "EcoLife", contribution: 900, points: 230 },
-    { rank: 3, company: "Nature Co.", contribution: 850, points: 220 },
-    { rank: 4, company: "Planet Savers", contribution: 800, points: 210 },
-    { rank: 5, company: "Sustainable Works", contribution: 750, points: 200 },
-    { rank: 6, company: "EcoFuture", contribution: 700, points: 190 },
-    { rank: 7, company: "GreenWave", contribution: 680, points: 185 },
-    { rank: 8, company: "BioPlanet", contribution: 650, points: 180 },
-    { rank: 9, company: "Earth Warriors", contribution: 620, points: 175 },
-    { rank: 10, company: "EcoRise", contribution: 600, points: 170 },
-    { rank: 11, company: "SaveNature", contribution: 580, points: 165 },
-    { rank: 12, company: "RecycleForce", contribution: 550, points: 160 },
-    { rank: 13, company: "EcoGuard", contribution: 530, points: 155 },
-    { rank: 14, company: "Planet Protectors", contribution: 500, points: 150 },
-    { rank: 15, company: "EarthCare", contribution: 480, points: 145 },
-];
+
 
 let currentPage = 1;
 const entriesPerPage = 10;
