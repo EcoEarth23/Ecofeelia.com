@@ -209,9 +209,7 @@ body {
     .hamburger-menu {
         display: block;
     }
-    .content-section {
-        padding: 15px;
-    }
+    
     .impact-container {
         flex-direction: column;
      }
