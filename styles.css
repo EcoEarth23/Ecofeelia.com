@@ -257,6 +257,8 @@ body {
     
     .impact-container {
         flex-direction: column;
+        margin-left:auto;
+        margin-right:auto;
      }
      .impact-text-section, .impact-bars-section {
          width: 80%;
