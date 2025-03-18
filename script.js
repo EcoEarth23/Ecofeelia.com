@@ -11,15 +11,19 @@ function showSection(section) {
     if (window.innerWidth <= 768) {
         document.querySelector('.nav').style.display = 'none';
     }
-}
+
     // Animate progress bars
-    /*if (section === 'impact') {
+    if (section === 'impact') {
         document.querySelectorAll('.progress').forEach(bar => {
             let targetWidth = bar.getAttribute('data-width');
+            bar.style.width = "0"; // Reset before animation
+        bar.style.transition = "width 1.5s ease-in-out"; // Smooth animation
+        setTimeout(() => {
             bar.style.width = targetWidth;
+        }, 100);
         });
-    }*/
-    function animateBars() {
+    }
+    /*function animateBars() {
     document.querySelectorAll('.progress').forEach(bar => {
         let targetWidth = bar.getAttribute('data-width');
         bar.style.width = "0"; // Reset before animation
@@ -28,8 +32,8 @@ function showSection(section) {
             bar.style.width = targetWidth;
         }, 100);
     });
+}*/
 }
-
 
 /*function showSection(section) {
     document.querySelectorAll('.content-section').forEach(sec => {
