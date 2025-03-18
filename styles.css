@@ -18,7 +18,7 @@ body {
     position: relative;
 }
 .logo img{
-    height: auto;
+    height: 50%;
     width: 50%;
 }
 .nav {
