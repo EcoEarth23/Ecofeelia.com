@@ -18,7 +18,7 @@ body {
     position: relative;
 }
 .logo img{
-    height: 30%;
+    height: auto;
     width: 30%;
 }
 .nav {
@@ -255,6 +255,10 @@ body {
     .hamburger-menu {
         display: block;
     }
+    .logo img{
+    height: 30%;
+    width: 30%;
+}
     
     .impact-container {
         flex-direction: column;
