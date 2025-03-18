@@ -38,7 +38,7 @@ window.open(certificateUrl, "_blank");
         // Leaderboard Data (Example)
 
 
-let currentPage = 1;
+let currentPage = 2;
 const entriesPerPage = 10;
 
 function loadLeaderboard() {
