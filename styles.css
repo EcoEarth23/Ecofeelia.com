@@ -18,7 +18,7 @@ body {
     position: relative;
 }
 .logo {
-    font-size: 1.5rem;
+    font-size: 50px;
 }
 .nav {
     display: flex;
@@ -70,7 +70,7 @@ body {
 /* Certificate Section */
 #certificate {
             background-color: White;
-            padding: 20px;
+            
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
