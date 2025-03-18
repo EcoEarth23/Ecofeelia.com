@@ -11,7 +11,7 @@ function showSection(section) {
     if (window.innerWidth <= 768) {
         document.querySelector('.nav').style.display = 'none';
     }
-
+}
     // Animate progress bars
     /*if (section === 'impact') {
         document.querySelectorAll('.progress').forEach(bar => {
@@ -29,7 +29,7 @@ function showSection(section) {
         }, 100);
     });
 }
-}
+
 
 /*function showSection(section) {
     document.querySelectorAll('.content-section').forEach(sec => {
