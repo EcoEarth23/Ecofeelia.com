@@ -259,7 +259,7 @@ body {
         flex-direction: column;
      }
      .impact-text-section, .impact-bars-section {
-         width: 100%;
+         width: 80%;
      }
     .leaderboard-container {
         overflow-x: auto;
