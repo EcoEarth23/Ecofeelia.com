@@ -28,21 +28,26 @@ window.onload = () => {
     const certificateURL = "https://drive.google.com/file/d/1D7viF1ToTfiTztDFM8t6X4Onf6i2pwZV/view?usp=sharing";
 
     // Function to download the certificate
-    const downloadCertificate = () => {
+    window.onload = function () {
+    const certificateURL = "https://drive.google.com/file/d/1D7viF1ToTfiTztDFM8t6X4Onf6i2pwZV/view?usp=sharing";
+
+    // Function to download the certificate
+    function downloadCertificate() {
         const a = document.createElement("a");
         a.href = certificateURL;
         a.target = "_blank"; // Opens in a new tab (Google Drive links do not support direct downloads)
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
-    };
+    }
 
     // Open certificate URL in a new tab on page load
     window.open(certificateURL, "_blank");
 
-    // Optionally, you can also trigger the download function on page load:
-    // downloadCertificate();
+    // Call the function to trigger the certificate download
+    downloadCertificate();
 };
+
 
         
         // Leaderboard Data (Example)
