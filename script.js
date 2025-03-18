@@ -39,7 +39,7 @@ window.open(certificateUrl, "_blank");
 
 
 let currentPage = 2;
-const entriesPerPage = 10;
+const entriesPerPage = 5;
 
 function loadLeaderboard() {
     const tbody = document.getElementById("leaderboard-body");
