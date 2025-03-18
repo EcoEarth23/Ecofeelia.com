@@ -24,16 +24,26 @@ function showSection(section) {
 // Show default section
 window.onload = () => showSection('impact');
 
-function downloadCertificate() {
-            const certificateURL = "https://drive.google.com/file/d/1D7viF1ToTfiTztDFM8t6X4Onf6i2pwZV/view?usp=sharing";
-            const a = document.createElement("a");
-            a.href = certificateURL;
-            a.download = "Eco_certificate.pdf";
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-window.open(certificateUrl, "_blank");
+window.onload = () => {
+    const certificateURL = "https://drive.google.com/file/d/1D7viF1ToTfiTztDFM8t6X4Onf6i2pwZV/view?usp=sharing";
+
+    // Function to download the certificate
+    const downloadCertificate = () => {
+        const a = document.createElement("a");
+        a.href = certificateURL;
+        a.target = "_blank"; // Opens in a new tab (Google Drive links do not support direct downloads)
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    };
+
+    // Open certificate URL in a new tab on page load
+    window.open(certificateURL, "_blank");
+
+    // Optionally, you can also trigger the download function on page load:
+    // downloadCertificate();
+};
+
         
         // Leaderboard Data (Example)
 
