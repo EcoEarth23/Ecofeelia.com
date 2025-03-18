@@ -38,8 +38,8 @@ window.open(certificateUrl, "_blank");
         // Leaderboard Data (Example)
 
 
-let currentPage = 2;
-const entriesPerPage = 5;
+let currentPage = 1;
+const entriesPerPage = 10;
 
 function loadLeaderboard() {
     const tbody = document.getElementById("leaderboard-body");
