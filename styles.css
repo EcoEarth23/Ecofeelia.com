@@ -18,8 +18,8 @@ body {
     position: relative;
 }
 .logo {
-     height: 50px;
-    width: auto;
+    height: 50px;
+    width: 50px;
 }
 .nav {
     display: flex;
