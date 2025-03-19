@@ -69,25 +69,18 @@ body {
 
 
 /* Certificate Section */
-#certificate {
-            
-            
-            border-radius: 10px;
-            
-            
-            width: 90%;
-            margin-left:auto;
-            margin-right:auto;        
-         }
-      
-        .download-button {
-            background-color: #e76f51;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+#certificate {         
+    border-radius: 10px;
+    width: 90%;
+}
+.download-button {
+    background-color: #e76f51;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
         .certificate-container {
             display: flex;
             gap: 20px;
