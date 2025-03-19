@@ -22,54 +22,16 @@ function showSection(section) {
             bar.style.width = targetWidth;
         }, 100);
         });
-    }
-    /*function animateBars() {
-    document.querySelectorAll('.progress').forEach(bar => {
-        let targetWidth = bar.getAttribute('data-width');
-        bar.style.width = "0"; // Reset before animation
-        bar.style.transition = "width 1.5s ease-in-out"; // Smooth animation
-        setTimeout(() => {
-            bar.style.width = targetWidth;
-        }, 100);
-    });
-}*/
+    }    
 }
 
-/*function showSection(section) {
-    document.querySelectorAll('.content-section').forEach(sec => {
-        sec.style.opacity = 0; // Fade out current section
-        sec.style.display = 'none';
-    });
-
-    const targetSection = document.getElementById(section);
-    targetSection.style.display = 'block';
-
-    setTimeout(() => {
-        targetSection.style.opacity = 1; // Fade in new section
-    }, 100);
-
-    if (section === 'impact') animateBars();
-    if (section === 'leaderboard') loadLeaderboard();
-}*/
-
-/* Animate Progress Bars */
-/*function animateBars() {
-    document.querySelectorAll('.progress').forEach(bar => {
-        let targetWidth = bar.getAttribute('data-width');
-        bar.style.width = "0"; // Reset before animation
-        bar.style.transition = "width 1.5s ease-in-out"; // Smooth animation
-        setTimeout(() => {
-            bar.style.width = targetWidth;
-        }, 100);
-    });
-}*/
 
 
 // Show default section
 window.onload = () => showSection('impact');
 
 function downloadCertificate() {
-             const certificateURL = "https://drive.google.com/file/d/1D7viF1ToTfiTztDFM8t6X4Onf6i2pwZV/view?usp=sharing";
+             const certificateURL = "https://drive.google.com/file/d/1ZxXIuPcxA3awVJ4JevtKf1g3WIc4WeSp/view?usp=sharing";
              const a = document.createElement("a");
              a.href = certificateURL;
              a.download = "Eco_certificate.pdf";
