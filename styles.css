@@ -106,8 +106,7 @@ body {
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         .award-demo{
-            width: 50%;
-            height:60%;
+            width: 50%;            
             border-radius: 10px;
             text-align:center;
         }
@@ -300,10 +299,10 @@ body {
      .certificate-text-section, .certificate-download-section {
          width: 90%;
      }
-    .award-demo{
+    .certificate-download-section .award-demo{
         margin-left:auto;
         margin-right:auto;
-        width:90%;
+        width:40%;
     }
     .leaderboard-container {
         overflow-x: auto;
