@@ -106,7 +106,7 @@ body {
         }
         .certificate-download-section img{
             width: 50%;
-            height:60%;
+            height:auto;
             border-radius: 10px;
             text-align:center;
         }
