@@ -107,7 +107,7 @@ body {
         }
         .award-demo{
             width: 50%;
-            height:auto;
+            height:60%;
             border-radius: 10px;
             text-align:center;
         }
@@ -297,9 +297,14 @@ body {
         margin-left:auto;
         margin-right:auto;
      }
-     .certificate-text-section, .certificate-download-section, .award-demo {
+     .certificate-text-section, .certificate-download-section {
          width: 90%;
      }
+    .award-demo{
+        margin-left:auto;
+        margin-right:auto;
+        width:90%;
+    }
     .leaderboard-container {
         overflow-x: auto;
     }
