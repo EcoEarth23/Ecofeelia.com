@@ -95,7 +95,7 @@ body {
             
         }
         .certificate-text-section {
-            width: 40%;
+            width: 60%;
             background: #cefad0;
             
             
@@ -104,7 +104,7 @@ body {
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         .certificate-download-section {
-            width: 55%;
+            width: 40%;
             background: #fff;
             padding: 20px;
             border-radius: 10px;
