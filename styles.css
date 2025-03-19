@@ -103,6 +103,13 @@ body {
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+        .certificate-download-section img{
+            width: 40%;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
 /* Leaderboard - Scrollable on Mobile */
 /* Leaderboard Section */
@@ -289,7 +296,7 @@ body {
         margin-left:auto;
         margin-right:auto;
      }
-     .certificate-text-section, .certificate-download-section {
+     .certificate-text-section, .certificate-download-section, .certificate-download-section img {
          width: 90%;
      }
     .leaderboard-container {
