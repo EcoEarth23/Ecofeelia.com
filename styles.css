@@ -88,6 +88,28 @@ body {
             border-radius: 5px;
             cursor: pointer;
         }
+        .certificate-container {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            
+        }
+        .certificate-text-section {
+            width: 40%;
+            background: #cefad0;
+            
+            
+            padding:20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .certificate-download-section {
+            width: 55%;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
 /* Leaderboard - Scrollable on Mobile */
 /* Leaderboard Section */
@@ -267,6 +289,14 @@ body {
         margin-right:auto;
      }
      .impact-text-section, .impact-bars-section {
+         width: 90%;
+     }
+    .certificate-container {
+        flex-direction: column;
+        margin-left:auto;
+        margin-right:auto;
+     }
+     .certificate-text-section, .certificate-download-section {
          width: 90%;
      }
     .leaderboard-container {
