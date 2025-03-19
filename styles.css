@@ -76,7 +76,7 @@ body {
 .download-button {
     background-color: #e76f51;
     color: white;
-    padding-top: 80px;
+    margin-top: 80px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
