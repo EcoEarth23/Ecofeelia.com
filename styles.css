@@ -80,8 +80,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-align:center;
-    margin-left:50%;
+    
 }
         .certificate-container {
             display: flex;
@@ -108,7 +107,8 @@ body {
         .certificate-download-section img{
             width: 50%;
             height:60%;
-            border-radius: 10px;            
+            border-radius: 10px;
+            text-align:center;
         }
 
 /* Leaderboard - Scrollable on Mobile */
