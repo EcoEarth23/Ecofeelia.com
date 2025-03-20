@@ -72,6 +72,7 @@ body {
 #certificate {         
     border-radius: 10px;
     width: 90%;
+    height:50%;
 }
 .download-button {
     background-color: #e76f51;
@@ -80,8 +81,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-align:center;
-    margin:0 auto;
+    justify-content:center;
     
 }
         .certificate-container {
