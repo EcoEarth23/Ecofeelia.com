@@ -71,8 +71,7 @@ body {
 /* Certificate Section */
 #certificate {         
     border-radius: 10px;
-    width: 90%;
-    height:50%;
+    width: 90%;    
 }
 .download-button {
     background-color: #e76f51;
@@ -80,8 +79,7 @@ body {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    justify-content:center;
+    cursor: pointer;    
     
 }
         .certificate-container {
@@ -101,6 +99,7 @@ body {
         }
         .certificate-download-section {
             width: 50%;
+            height:10%;
             background: #fff;
             padding: 20px;
             border-radius: 10px;
