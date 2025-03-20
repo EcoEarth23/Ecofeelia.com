@@ -2,6 +2,9 @@ function toggleMenu() {
     const nav = document.querySelector('.nav');
     nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
 }
+function logout() {
+            window.location.href = 'index.php';
+        }
 
 function showSection(section) {
     document.querySelectorAll('.content-section').forEach(sec => sec.style.display = 'none');
