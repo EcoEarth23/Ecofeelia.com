@@ -3,7 +3,7 @@ function toggleMenu() {
     nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
 }
 function logout() {
-            window.location.href = "https://google.com";
+            window.location.href = "http://localhost/customer/";
         }
 
 function showSection(section) {
