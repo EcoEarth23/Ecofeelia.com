@@ -3,7 +3,7 @@ function toggleMenu() {
     nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
 }
 function logout() {
-            window.location.href = "http://localhost/customer/";
+            window.location.href = "http://client-dashboard.infinityfreeapp.com/";
         }
 
 function showSection(section) {
