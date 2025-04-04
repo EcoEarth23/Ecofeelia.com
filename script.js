@@ -34,15 +34,16 @@ function showSection(section) {
 window.onload = () => showSection('impact');
 
 function downloadCertificate() {
-             const certificateURL = "https://drive.google.com/file/d/1ZxXIuPcxA3awVJ4JevtKf1g3WIc4WeSp/view?usp=sharing";
+             const certificateURL = "https://drive.google.com/file/d/1ZxXIuPcxA3awVJ4JevtKf1g3WIc4WeSp/view?usp=sharing";    
              const a = document.createElement("a");
              a.href = certificateURL;
+             a.target = '_blank';
              a.download = "Eco_certificate.pdf";
              document.body.appendChild(a);
              a.click();
              document.body.removeChild(a);
          }
- window.open(certificateUrl, target="_blank");
+ //window.open(certificateUrl, target="_blank");
 
         
         // Leaderboard Data (Example)
