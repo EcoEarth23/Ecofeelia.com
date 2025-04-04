@@ -42,7 +42,7 @@ function downloadCertificate() {
              a.click();
              document.body.removeChild(a);
          }
- window.open(certificateUrl, "_blank");
+ window.open(certificateUrl, target="_blank");
 
         
         // Leaderboard Data (Example)
