@@ -212,7 +212,7 @@ body {
 }
 
 /* Progress Bars */
-.impact-container {
+/*.impact-container {
     display: flex;
     gap: 20px;
     align-items: flex-start;
@@ -267,10 +267,84 @@ body {
     100% { transform: translateY(-3px); }
 }
 /* Different Progress Bar Colors */
-.trees { background:linear-gradient(to right, #EFBF04,#EFBF04); }
+/*.trees { background:linear-gradient(to right, #EFBF04,#EFBF04); }
 .carbon { background: linear-gradient(to right, #EFBF04,#EFBF04); }
 .plastic { background: linear-gradient(to right, #EFBF04,#EFBF04); }
-.artisian { background: linear-gradient(to right, #EFBF04,#EFBF04); }
+.artisian { background: linear-gradient(to right, #EFBF04,#EFBF04); }*/
+
+.impact-bars-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.bar-heading {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.bar-container {
+  margin-bottom: 25px;
+}
+
+.bar-title {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.bar {
+  width: 100%;
+  height: 30px;
+  background-color: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 12px;
+  color: #fff;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: width 1s ease-in-out;
+  width: 0; /* animated to data-width via JS */
+}
+
+.progress img {
+  height: 18px;
+  margin-right: 6px;
+}
+
+.bar-percentage {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Custom colors */
+.trees {
+  background-color: #4caf50;
+}
+
+.carbon {
+  background-color: #03a9f4;
+}
+
+.plastic {
+  background-color: #ff9800;
+}
+
+.artisan {
+  background-color: #9c27b0;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
