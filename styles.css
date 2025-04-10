@@ -212,7 +212,7 @@ body {
 }
 
 /* Progress Bars */
-/*.impact-container {
+.impact-container {
     display: flex;
     gap: 20px;
     align-items: flex-start;
@@ -267,12 +267,12 @@ body {
     100% { transform: translateY(-3px); }
 }
 /* Different Progress Bar Colors */
-/*.trees { background:linear-gradient(to right, #EFBF04,#EFBF04); }
+.trees { background:linear-gradient(to right, #EFBF04,#EFBF04); }
 .carbon { background: linear-gradient(to right, #EFBF04,#EFBF04); }
 .plastic { background: linear-gradient(to right, #EFBF04,#EFBF04); }
-.artisian { background: linear-gradient(to right, #EFBF04,#EFBF04); }*/
+.artisian { background: linear-gradient(to right, #EFBF04,#EFBF04); }
 
-.impact-bars-section {
+/*.impact-bars-section {
   max-width: 600px;
   margin: 0 auto;
 }
@@ -314,7 +314,7 @@ body {
   font-weight: bold;
   font-size: 14px;
   transition: width 1s ease-in-out;
-  width: 0; /* animated to data-width via JS */
+  width: 0; /* animated to data-width via JS 
 }
 
 .progress img {
@@ -328,7 +328,7 @@ body {
   gap: 6px;
 }
 
-/* Custom colors */
+/* Custom colors 
 .trees {
   background-color: #4caf50;
 }
@@ -343,7 +343,7 @@ body {
 
 .artisan {
   background-color: #9c27b0;
-}
+}*/
 
 
 /* Responsive Design */
