@@ -169,6 +169,17 @@ body {
 .pagination button:hover {
     background-color: #52b788;
 }
+.position-box {
+      display: inline-block;
+      background-color: #e0f7fa;
+      color: #00796b;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      min-width: 30px;
+      text-align: center;
+      font-size: 14px;
+    }
 
 .formula-box {
     margin-top: 20px;
