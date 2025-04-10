@@ -90,7 +90,7 @@ function downloadCertificate() {
 
 //Leader board
 
-    const rowsPerPage = 5;
+    const rowsPerPage = 10;
     let currentPage = 1;
 
     function showPage(page) {
