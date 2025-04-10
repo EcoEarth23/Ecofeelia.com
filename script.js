@@ -16,7 +16,7 @@ function showSection(section) {
     }
 
     // Animate progress bars
-    /*if (section === 'impact') {
+    if (section === 'impact') {
         document.querySelectorAll('.progress').forEach(bar => {
             let targetWidth = bar.getAttribute('data-width');
             bar.style.width = "0"; // Reset before animation
@@ -26,8 +26,8 @@ function showSection(section) {
         }, 100);
         });
     }    
-}*/
-    document.addEventListener("DOMContentLoaded", () => {
+}
+    /*document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".progress").forEach(bar => {
     const width = bar.getAttribute("data-width");
     if (width) {
@@ -36,7 +36,7 @@ function showSection(section) {
       }, 200); // slight delay to trigger animation
     }
   });
-});
+});*/
 
 
 
