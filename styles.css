@@ -171,8 +171,8 @@ body {
 }
 .position-box {
       display: inline-block;
-      background-color: #e0f7fa;
-      color: #00796b;
+      background-color: green;
+      color: black;
       padding: 4px 10px;
       border-radius: 6px;
       font-weight: bold;
