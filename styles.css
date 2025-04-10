@@ -258,6 +258,10 @@ body {
     padding: 0 15px;
     font-weight: bold;
 }
+.progress img {
+    height: 20px;
+    margin-right: 8px;
+  }
 @keyframes bounce {
     0% { transform: translateY(0); }
     100% { transform: translateY(-3px); }
