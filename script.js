@@ -136,46 +136,54 @@ function downloadCertificate() {
     });*/
 
           const rowsPerPage = 5;
-  let currentPage = 1;
+    let currentPage = 1;
 
-  function showPage(page) {
-    const rows = document.querySelectorAll("#leaderboard-body tr");
-    const totalPages = Math.ceil(rows.length / rowsPerPage);
-    const pageNumber = document.getElementById("page-number");
+    function showPage(page) {
+      const rows = document.querySelectorAll("#leaderboard-body tr");
+      const totalPages = Math.ceil(rows.length / rowsPerPage);
+      const pageNumber = document.getElementById("page-number");
 
-    currentPage = Math.max(1, Math.min(page, totalPages));
-    const start = (currentPage - 1) * rowsPerPage;
-    const end = start + rowsPerPage;
+      currentPage = Math.max(1, Math.min(page, totalPages));
+      const start = (currentPage - 1) * rowsPerPage;
+      const end = start + rowsPerPage;
 
-    rows.forEach((row, i) => {
-      row.style.display = (i >= start && i < end) ? "table-row" : "none";
+      rows.forEach((row, i) => {
+        const visibleIndex = i - start;
 
-      // Set position column with emojis
-      const positionCell = row.cells[4];
-      const globalRank = i + 1;
+        row.style.display = (i >= start && i < end) ? "table-row" : "none";
 
-      if (globalRank === 1) positionCell.textContent = "🥇";
-      else if (globalRank === 2) positionCell.textContent = "🥈";
-      else if (globalRank === 3) positionCell.textContent = "🥉";
-      else positionCell.textContent = `${globalRank}️⃣`;
+        if (i >= start && i < end) {
+          const positionCell = row.cells[4];
+          const globalRank = i + 1;
+
+          if (globalRank === 1) {
+            positionCell.innerHTML = `🥇`;
+          } else if (globalRank === 2) {
+            positionCell.innerHTML = `🥈`;
+          } else if (globalRank === 3) {
+            positionCell.innerHTML = `🥉`;
+          } else {
+            positionCell.innerHTML = `<span class="position-box">${globalRank}</span>`;
+          }
+        }
+      });
+
+      pageNumber.textContent = `Page ${currentPage}`;
+    }
+
+    function prevPage() {
+      if (currentPage > 1) showPage(currentPage - 1);
+    }
+
+    function nextPage() {
+      const rows = document.querySelectorAll("#leaderboard-body tr");
+      const totalPages = Math.ceil(rows.length / rowsPerPage);
+      if (currentPage < totalPages) showPage(currentPage + 1);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      showPage(1);
     });
-
-    pageNumber.textContent = `Page ${currentPage}`;
-  }
-
-  function prevPage() {
-    if (currentPage > 1) showPage(currentPage - 1);
-  }
-
-  function nextPage() {
-    const rows = document.querySelectorAll("#leaderboard-body tr");
-    const totalPages = Math.ceil(rows.length / rowsPerPage);
-    if (currentPage < totalPages) showPage(currentPage + 1);
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    showPage(1);
-  });
 
 
 
