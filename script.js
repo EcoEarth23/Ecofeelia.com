@@ -90,7 +90,7 @@ function downloadCertificate() {
 
 //Leader board
 
-    const rowsPerPage = 10;
+    /*const rowsPerPage = 10;
     let currentPage = 1;
 
     function showPage(page) {
@@ -133,7 +133,49 @@ function downloadCertificate() {
     // Show first page on load
     document.addEventListener('DOMContentLoaded', () => {
         showPage(1);
+    });*/
+
+          const rowsPerPage = 5;
+  let currentPage = 1;
+
+  function showPage(page) {
+    const rows = document.querySelectorAll("#leaderboard-body tr");
+    const totalPages = Math.ceil(rows.length / rowsPerPage);
+    const pageNumber = document.getElementById("page-number");
+
+    currentPage = Math.max(1, Math.min(page, totalPages));
+    const start = (currentPage - 1) * rowsPerPage;
+    const end = start + rowsPerPage;
+
+    rows.forEach((row, i) => {
+      row.style.display = (i >= start && i < end) ? "table-row" : "none";
+
+      // Set position column with emojis
+      const positionCell = row.cells[4];
+      const globalRank = i + 1;
+
+      if (globalRank === 1) positionCell.textContent = "🥇";
+      else if (globalRank === 2) positionCell.textContent = "🥈";
+      else if (globalRank === 3) positionCell.textContent = "🥉";
+      else positionCell.textContent = `${globalRank}️⃣`;
     });
+
+    pageNumber.textContent = `Page ${currentPage}`;
+  }
+
+  function prevPage() {
+    if (currentPage > 1) showPage(currentPage - 1);
+  }
+
+  function nextPage() {
+    const rows = document.querySelectorAll("#leaderboard-body tr");
+    const totalPages = Math.ceil(rows.length / rowsPerPage);
+    if (currentPage < totalPages) showPage(currentPage + 1);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    showPage(1);
+  });
 
 
 
