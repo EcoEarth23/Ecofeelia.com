@@ -49,7 +49,7 @@ function downloadCertificate() {
         // Leaderboard Data (Example)
 
 
-let currentPage = 1;
+/*let currentPage = 1;
  const entriesPerPage = 10;
  
  function loadLeaderboard() {
@@ -86,7 +86,56 @@ let currentPage = 1;
          currentPage++;
          loadLeaderboard();
      }
- }
+ }*/
+
+//Leader board
+
+    const rowsPerPage = 5;
+    let currentPage = 1;
+
+    function showPage(page) {
+        const table = document.getElementById('leaderboard-body');
+        const rows = table.querySelectorAll('tr');
+        const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+        // Keep page in bounds
+        page = Math.max(1, Math.min(page, totalPages));
+
+        // Hide all rows
+        rows.forEach(row => row.style.display = 'none');
+
+        // Show only current page rows
+        const start = (page - 1) * rowsPerPage;
+        const end = start + rowsPerPage;
+        for (let i = start; i < end && i < rows.length; i++) {
+            rows[i].style.display = '';
+        }
+
+        // Update current page
+        currentPage = page;
+        document.getElementById('page-number').textContent = `Page ${currentPage}`;
+    }
+
+    function nextPage() {
+        const rows = document.getElementById('leaderboard-body').querySelectorAll('tr');
+        const totalPages = Math.ceil(rows.length / rowsPerPage);
+        if (currentPage < totalPages) {
+            showPage(currentPage + 1);
+        }
+    }
+
+    function prevPage() {
+        if (currentPage > 1) {
+            showPage(currentPage - 1);
+        }
+    }
+
+    // Show first page on load
+    document.addEventListener('DOMContentLoaded', () => {
+        showPage(1);
+    });
+
+
 
 // Load the first page on window load
 window.onload = () => {
