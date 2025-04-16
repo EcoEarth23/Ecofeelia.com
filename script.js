@@ -4,6 +4,9 @@
         document.body.style.overflow = 'auto';
       }, 2000);
     });
+    function toggleMenu() {
+      document.querySelector('.nav').classList.toggle('active');
+    }
 function showSection(sectionId) {
       const sections = document.querySelectorAll('section');
       const loader = document.getElementById('initialLoader');
