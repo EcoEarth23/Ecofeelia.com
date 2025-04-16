@@ -70,6 +70,15 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+/* Content Sections (Example) */
+        .content-section {
+            display: none;
+            padding: 20px;
+        }
+
+        .content-section.active {
+            display: block;
+        }
 @media (max-width: 768px) {
     .nav {
         flex-direction: column;
