@@ -1,4 +1,4 @@
-function toggleMenu() {
+/*function toggleMenu() {
     const nav = document.querySelector('.nav');
     nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
 }
@@ -13,7 +13,25 @@ function showSection(section) {
     // Close menu after clicking a section (for mobile)
     if (window.innerWidth <= 768) {
         document.querySelector('.nav').style.display = 'none';
-    }
+    }*/
+function showSection(section) {
+    const loader = document.getElementById('loader-overlay');
+    loader.style.display = 'flex'; // Show loader
+
+    // Optional: hide all content while loading
+    document.querySelectorAll('.content-section').forEach(sec => sec.style.display = 'none');
+
+    setTimeout(() => {
+        loader.style.display = 'none'; // Hide loader
+        document.getElementById(section).style.display = 'block';
+
+        // Close nav menu if in mobile view
+        if (window.innerWidth <= 768) {
+            document.querySelector('.nav').style.display = 'none';
+        }
+    }, 2000); // Wait for 2 seconds
+}
+
 
     // Animate progress bars
     if (section === 'impact') {
