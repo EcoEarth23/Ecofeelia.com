@@ -1,3 +1,37 @@
+ window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById('initialLoader').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }, 2000);
+    });
+function showSection(sectionId) {
+      const sections = document.querySelectorAll('section');
+      const loader = document.getElementById('initialLoader');
+
+      // Reset all sections
+      sections.forEach(sec => {
+        sec.style.display = 'none';
+        sec.classList.remove('fadeIn');
+        sec.style.opacity = 0;
+      });
+
+      loader.classList.remove('hidden');
+
+      // Delay and show section
+      setTimeout(() => {
+        loader.classList.add('hidden');
+        const target = document.getElementById(sectionId);
+        if (target) {
+          target.style.display = 'block';
+          target.classList.add('fadeIn');
+        }
+      }, 5000); // 5 sec loading for section
+
+      // Hide mobile nav
+      document.querySelector('.nav').classList.remove('active');
+    }
+
+
 function toggleMenu() {
     const nav = document.querySelector('.nav');
     nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
