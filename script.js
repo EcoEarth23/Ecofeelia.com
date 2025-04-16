@@ -1,31 +1,19 @@
 function toggleMenu() {
-        const nav = document.querySelector('.nav');
-        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-    }
-
-    function logout() {
-        window.location.href = "http://client-dashboard.infinityfreeapp.com/";
-    }
-
-    function showSection(section) {
-        const loader = document.getElementById('loader-overlay');
-        loader.style.display = 'flex'; // Show loader
-
-        // Hide all sections first
-        document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
-
-        // Delay to show loader
-        setTimeout(() => {
-            loader.style.display = 'none'; // Hide loader
-            document.getElementById(section).classList.add('active'); // Show target section
-
-            // Close nav if mobile
-            if (window.innerWidth <= 768) {
-                document.querySelector('.nav').style.display = 'none';
-            }
-        }, 2000); // 2 second delay
-    }
-
+     const nav = document.querySelector('.nav');
+     nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+ }
+ function logout() {
+             window.location.href = "http://client-dashboard.infinityfreeapp.com/";
+         }
+ 
+ function showSection(section) {
+     document.querySelectorAll('.content-section').forEach(sec => sec.style.display = 'none');
+     document.getElementById(section).style.display = 'block';
+ 
+     // Close menu after clicking a section (for mobile)
+     if (window.innerWidth <= 768) {
+         document.querySelector('.nav').style.display = 'none';
+     }
 
     // Animate progress bars
     if (section === 'impact') {
