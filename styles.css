@@ -111,7 +111,7 @@ body {
             100% { transform: rotate(360deg); }
         }
 
-        /* Content Sections (Example) */
+        /* Content Sections (Example) 
         .section-content {
             display: none;
             padding: 20px;
@@ -119,7 +119,7 @@ body {
 
         .section-content.active {
             display: block;
-        }
+        }*/
 
 /* Sections */
 .content-section {
