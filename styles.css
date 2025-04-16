@@ -71,12 +71,12 @@ body {
     100% { transform: rotate(360deg); }
 }
 /* Content Sections (Example) */
-        .content-section {
+        .content-sections {
             display: none;
             padding: 20px;
         }
 
-        .content-section.active {
+        .content-sections.active {
             display: block;
         }
 @media (max-width: 768px) {
