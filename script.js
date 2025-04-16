@@ -1,4 +1,4 @@
-    function toggleMenu() {
+function toggleMenu() {
         const nav = document.querySelector('.nav');
         nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
     }
@@ -12,7 +12,7 @@
         loader.style.display = 'flex'; // Show loader
 
         // Hide all sections first
-        document.querySelectorAll('.content-sections').forEach(sec => sec.classList.remove('active'));
+        document.querySelectorAll('.section-content').forEach(sec => sec.classList.remove('active'));
 
         // Delay to show loader
         setTimeout(() => {
