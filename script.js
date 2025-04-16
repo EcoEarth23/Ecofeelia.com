@@ -1,4 +1,4 @@
-/*function toggleMenu() {
+function toggleMenu() {
      const nav = document.querySelector('.nav');
      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
  }
@@ -13,44 +13,7 @@
      // Close menu after clicking a section (for mobile)
      if (window.innerWidth <= 768) {
          document.querySelector('.nav').style.display = 'none';
-     }*/
-function toggleMenu() {
-    const nav = document.querySelector('.nav');
-    const menuToggle = document.getElementById('menuToggle');
-    const isOpen = nav.style.display === 'flex';
-
-    if (isOpen) {
-      nav.style.display = 'none';
-      menuToggle.classList.remove('close');
-    } else {
-      nav.style.display = 'flex';
-      menuToggle.classList.add('close');
-    }
-  }
-
-  function logout() {
-    window.location.href = "http://client-dashboard.infinityfreeapp.com/";
-  }
-
-  function showSection(section) {
-    const loader = document.getElementById('loader-overlay');
-    const menuToggle = document.getElementById('menuToggle');
-
-    loader.style.display = 'flex';
-
-    document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
-
-    setTimeout(() => {
-      loader.style.display = 'none';
-      document.getElementById(section).classList.add('active');
-
-      if (window.innerWidth <= 768) {
-        document.querySelector('.nav').style.display = 'none';
-        menuToggle.classList.remove('close');
-      }
-    }, 2000);
-  }
-
+     }
     // Animate progress bars
     if (section === 'impact') {
         document.querySelectorAll('.progress').forEach(bar => {
