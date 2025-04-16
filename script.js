@@ -12,7 +12,7 @@
         loader.style.display = 'flex'; // Show loader
 
         // Hide all sections first
-        document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
+        document.querySelectorAll('.content-sections').forEach(sec => sec.classList.remove('active'));
 
         // Delay to show loader
         setTimeout(() => {
