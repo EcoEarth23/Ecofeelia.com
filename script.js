@@ -12,7 +12,7 @@ function toggleMenu() {
         loader.style.display = 'flex'; // Show loader
 
         // Hide all sections first
-        document.querySelectorAll('.section-content').forEach(sec => sec.classList.remove('active'));
+        document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
 
         // Delay to show loader
         setTimeout(() => {
