@@ -354,7 +354,7 @@ window.onload = displayLeaderboard;
 // Load the first page on window load
 window.onload = () => {
     showSection('impact'); // Show default section
-    loadLeaderboard(); // Load leaderboard data
+    displayLeaderboard(); // Load leaderboard data
 };
 
 
