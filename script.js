@@ -352,6 +352,7 @@ document.getElementById("nextBtn").addEventListener("click", () => {
 window.onload = displayLeaderboard;
 
 
+
  
 
 
