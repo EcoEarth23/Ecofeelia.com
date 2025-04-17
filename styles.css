@@ -242,9 +242,7 @@
      background-color: #52b788;
  }
 #page-number{
- display: flex;
- justify-content: space-around;
- margin-top:30px;
+  margin-top:5px;
 }
  .position-box {
        display: inline-block;
