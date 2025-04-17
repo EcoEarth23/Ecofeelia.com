@@ -349,7 +349,7 @@ document.getElementById("nextBtn").addEventListener("click", () => {
   }
 });
 
-window.onload = displayLeaderboard;
+
 
 // Load the first page on window load
 window.onload = () => {
