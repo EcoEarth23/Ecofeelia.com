@@ -197,7 +197,7 @@ function downloadCertificate() {
          }
 
      //Leader board
-    /*const rowsPerPage = 10;
+    const rowsPerPage = 10;
     let currentPage = 1;
 
     function showPage(page) {
@@ -245,10 +245,15 @@ function downloadCertificate() {
 
     document.addEventListener("DOMContentLoaded", () => {
       showPage(1);
-    });*/
+    });
+    
+    window.onload = () => {
+    showSection('impact'); // Show default section
+    loadLeaderboard(); // Load leaderboard data
+};
 
 
-const members = [
+/*const members = [
   { name: "Cybersecurity NXXT", points: 1650, logo: "https://cybersecurity-nxxt.com/assets/images/logo.svg" },
   { name: "BHEL", points: 1520, logo: "data:image/png;base64,iVBOR..." },
   { name: "Zacco", points: 1480, logo: "https://www.zacco.com/wp-content/themes/zacco22/icons/zacco_logo_ny.svg" },
@@ -353,12 +358,9 @@ function showSection(sectionId) {
     currentPage = 0;
     displayLeaderboard();
   }
-}
+}*/
 
-window.onload = () => {
-    showSection('impact'); // Show default section
-    displayLeaderboard(); // Load leaderboard data
-};
+
 
 
 
