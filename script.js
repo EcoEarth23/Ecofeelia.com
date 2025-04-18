@@ -355,9 +355,9 @@ function showSection(sectionId) {
   }
 }
 
-// ✅ Load "impact" by default
 window.onload = () => {
-  showSection("impact");
+    showSection('impact'); // Show default section
+    displayLeaderboard(); // Load leaderboard data
 };
 
 
