@@ -247,7 +247,7 @@ function downloadCertificate() {
       showPage(1);
     });*/
 
-<script>
+
 const members = [
   { name: "Cybersecurity NXXT", points: 1650, logo: "https://cybersecurity-nxxt.com/assets/images/logo.svg" },
   { name: "BHEL", points: 1520, logo: "data:image/png;base64,iVBOR..." },
