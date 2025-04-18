@@ -293,6 +293,7 @@
 }
 
 .leaderboard-container {
+  overflow-x: auto; /* Enables horizontal scrolling on small screens */   
   width: 90%;
   max-width: 950px;
   background: #f0f8f0;
