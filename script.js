@@ -361,6 +361,7 @@ function showSection(sectionId) {
 
 window.onload = () => {
   showSection("impact"); // Set default visible section
+  loadLeaderboard();
 };
 
 
