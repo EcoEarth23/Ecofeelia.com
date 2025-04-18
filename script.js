@@ -197,7 +197,7 @@ function downloadCertificate() {
          }
 
      //Leader board
-    /*const rowsPerPage = 10;
+    const rowsPerPage = 10;
     let currentPage = 1;
 
     function showPage(page) {
@@ -253,116 +253,8 @@ function downloadCertificate() {
 window.onload = () => {
     showSection('impact'); // Show default section
     loadLeaderboard(); // Load leaderboard data
-};*/
-const members = [
-  { name: "Cybersecurity NXXT", points: 1650, logo: "https://cybersecurity-nxxt.com/assets/images/logo.svg" },
-  { name: "BHEL", points: 1520, logo: "data:image/png;base64,iVBOR..." },
-  { name: "Zacco", points: 1480, logo: "https://www.zacco.com/wp-content/themes/zacco22/icons/zacco_logo_ny.svg" },
-  { name: "George Russell", points: 1320, logo: "driver4.jpg" },
-  { name: "Lando Norris", points: 1280, logo: "driver5.jpg" },
-  { name: "Carlos Sainz", points: 1250, logo: "driver6.jpg" },
-  { name: "Fernando Alonso", points: 1200, logo: "driver7.jpg" },
-  { name: "Sergio Pérez", points: 1190, logo: "driver8.jpg" },
-  { name: "Valtteri Bottas", points: 1160, logo: "driver9.jpg" },
-  { name: "Kevin Magnussen", points: 1120, logo: "driver10.jpg" }
-];
-
-let currentPage = 0;
-const itemsPerPage = 5;
-
-function displayLeaderboard() {
-  const list = document.getElementById("leaderboard");
-  list.innerHTML = "";
-
-  members.sort((a, b) => b.points - a.points); // Fixed typo
-
-  const start = currentPage * itemsPerPage;
-  const end = start + itemsPerPage;
-  const paginatedMembers = members.slice(start, end);
-
-  paginatedMembers.forEach((member, index) => {
-    const globalIndex = start + index;
-    const li = document.createElement("li");
-    li.style.animationDelay = `${index * 0.2}s`;
-
-    if (globalIndex === 0) li.classList.add("gold");
-    else if (globalIndex === 1) li.classList.add("silver");
-    else if (globalIndex === 2) li.classList.add("bronze");
-
-    const badge = document.createElement("span");
-    badge.classList.add("badge");
-
-    if (globalIndex === 0) {
-      badge.classList.add("gold-badge");
-      badge.innerHTML = "Gold";
-    } else if (globalIndex === 1) {
-      badge.classList.add("silver-badge");
-      badge.innerHTML = "Silver";
-    } else if (globalIndex === 2) {
-      badge.classList.add("bronze-badge");
-      badge.innerHTML = "Bronze";
-    }
-
-    const driverLogo = document.createElement("img");
-    driverLogo.src = member.logo;
-    driverLogo.alt = `${member.name} logo`;
-    driverLogo.classList.add("driver-logo");
-
-    const rankContainer = document.createElement("div");
-    rankContainer.classList.add("rank-container");
-
-    const rankSpan = document.createElement("span");
-    rankSpan.classList.add("rank");
-    rankSpan.textContent = `#${globalIndex + 1}`;
-
-    rankContainer.appendChild(driverLogo);
-    rankContainer.appendChild(rankSpan);
-
-    li.innerHTML = `
-      <span class="name">${member.name}</span>
-      <span class="points">${member.points}</span>
-    `;
-
-    li.insertBefore(rankContainer, li.firstChild);
-    if (globalIndex < 3) li.appendChild(badge);
-    list.appendChild(li);
-  });
-
-  document.getElementById("prevBtn").disabled = currentPage === 0;
-  document.getElementById("nextBtn").disabled = (currentPage + 1) * itemsPerPage >= members.length;
-}
-
-document.getElementById("prevBtn").addEventListener("click", () => {
-  if (currentPage > 0) {
-    currentPage--;
-    displayLeaderboard();
-  }
-});
-
-document.getElementById("nextBtn").addEventListener("click", () => {
-  if ((currentPage + 1) * itemsPerPage < members.length) {
-    currentPage++;
-    displayLeaderboard();
-  }
-});
-
-// Show specific section only
-function showSection(sectionId) {
-  const sections = document.querySelectorAll(".section");
-  sections.forEach(section => section.style.display = "none");
-
-  const target = document.getElementById(sectionId);
-  if (target) target.style.display = "block";
-
-  if (sectionId === "leaderboard-section") {
-    displayLeaderboard();
-  }
-}
-
-window.onload = () => {
-  showSection("impact"); // Set default visible section
-  loadLeaderboard();
 };
+
 
 
 
