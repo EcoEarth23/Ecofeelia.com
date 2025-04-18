@@ -247,9 +247,10 @@ function downloadCertificate() {
       showPage(1);
     });*/
 
+<script>
 const members = [
-  { name: "Cybersecurity NXXT", points: 1650, logo: "https://cybersecurity-nxxt.com/assets/images/logo.svg"},
-  { name: "BHEL", points: 1520, logo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAhCAMAAACcLxmXAAAAclBMVEUsP37///8dNHkrPn44SIN1fqOXnbgYMXe0uMtpc5ydo7wgNnoAJXL29/mmq8K3u83DxtU8TIV9hahLWYxveaDk5exga5ckOXsTLnaMk7EAIHHw8fTX2eOussdWYpHq6/DO0NwAAGREU4kAGG4AAF0AD2vVU3WTAAACB0lEQVQ4jY1T7ZarIAwkoiiIoKLiR9Vtd/f9X/EmWG279Zze+TEtYcwEEtgkk4C6Tl5QvwTkxCRskEsBz8jq4XkpWQIwCWNkwszKTKyEcsMqlOoVrbkRqpETQEJCgKapygRWuSaXcfIYGEwGUCwgVS3dBQ7hbXGzhTnryku9NhgwdQlQmsRWdmZwCMvFiWWC1gGIJrFYTLJgmimGtYNWPoSY4atDFsEED7XKe7QswZab0CmBUMoEJhI74RojW9AxHr0hPegBzt7hbxj17mzrBTxWOZLJPwnHFpONbec/6HpRaNYr0B903sGc+gXK/nw/Tzf4fALXI0l9j/E0jR5V5LXNrM0y290AZlUhWT1kMwZZZsxwKDXOh12pF9SSjLrUXpEKJWr8UdFeGO1cW6QYGw2OaKDeGj1+UXS/0x53SvSDNaT5oRHuSVHlNHPtcQMaV5YGwixIFxrtyzd90izDizO5hIfwnVFa+jeQoigG+rw6nGlIeTgAHgp+SNmTIh7zZ2dOztJQmhvVEJOzDopIUD3ps/OVrDWpO7E7D1rTTVTp3Tqcj2B/0bkI19S3IVIFnv62Ey0cFDnH1+VYHFdV5QMf18j4BpQaqHO8VdNvMbZv/IVeS83Goh3PR+cAr0BznLGzHC/IFc51lDWnr+D5Yy9Rkg/pqUxG/AFPlXv+jkiyoon/A03xD0eoIPDKLxNJAAAAAElFTkSuQmCC" },
+  { name: "Cybersecurity NXXT", points: 1650, logo: "https://cybersecurity-nxxt.com/assets/images/logo.svg" },
+  { name: "BHEL", points: 1520, logo: "data:image/png;base64,iVBOR..." },
   { name: "Zacco", points: 1480, logo: "https://www.zacco.com/wp-content/themes/zacco22/icons/zacco_logo_ny.svg" },
   { name: "George Russell", points: 1320, logo: "driver4.jpg" },
   { name: "Lando Norris", points: 1280, logo: "driver5.jpg" },
@@ -267,7 +268,7 @@ function displayLeaderboard() {
   const list = document.getElementById("leaderboard");
   list.innerHTML = "";
 
-  members.sort((a, b) => b.points - a.pointss);
+  members.sort((a, b) => b.points - a.points); // Correct sort
 
   const start = currentPage * itemsPerPage;
   const end = start + itemsPerPage;
@@ -276,8 +277,6 @@ function displayLeaderboard() {
   paginatedMembers.forEach((member, index) => {
     const globalIndex = start + index;
     const li = document.createElement("li");
-
-    // Add animation delay
     li.style.animationDelay = `${index * 0.2}s`;
 
     if (globalIndex === 0) li.classList.add("gold");
@@ -302,7 +301,6 @@ function displayLeaderboard() {
     driverLogo.src = member.logo;
     driverLogo.alt = `${member.name} logo`;
     driverLogo.classList.add("driver-logo");
-    
 
     const rankContainer = document.createElement("div");
     rankContainer.classList.add("rank-container");
@@ -342,14 +340,29 @@ document.getElementById("nextBtn").addEventListener("click", () => {
   }
 });
 
-window.onload = displayLeaderboard;
+// ✅ Show one section at a time
+function showSection(sectionId) {
+  const sections = document.querySelectorAll(".section");
+  sections.forEach(section => section.style.display = "none");
 
+  const target = document.getElementById(sectionId);
+  if (target) target.style.display = "block";
 
-// Load the first page on window load
+  // Load leaderboard only when its section is shown
+  if (sectionId === "leaderboard-section") {
+    currentPage = 0;
+    displayLeaderboard();
+  }
+}
+
+// ✅ Load "impact" by default
 window.onload = () => {
-    showSection('impact'); // Show default section
-    loadLeaderboard(); // Load leaderboard data
+  showSection("impact");
 };
+
+
+
+
 
 
 
