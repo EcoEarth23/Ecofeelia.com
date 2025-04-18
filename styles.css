@@ -149,17 +149,10 @@
 }
 
 .globe-icon {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   animation: rotateGlobe 2s linear infinite;
 }
-
-.leaf-icon {
-  width: 60px;
-  margin-top: -20px;
-  animation: bounceLeaf 2s ease-in-out infinite;
-}
-
 .loading-text {
   margin-top: 10px;
   font-size: 1rem;
