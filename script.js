@@ -154,22 +154,23 @@ function displayLeaderboard() {
       entry.className = "leaderboard-entry";
       entry.style.animationDelay = `${index * 0.2}s`;
 
+
       // Add rankings and badges
-      if (globalIndex === 0) entry.classList.add("");
-      else if (globalIndex === 1) entry.classList.add("");
-      else if (globalIndex === 2) entry.classList.add("");
+      if (globalIndex === 0) entry.classList.add("gold");
+      else if (globalIndex === 1) entry.classList.add("silver");
+      else if (globalIndex === 2) entry.classList.add("bronze");
 
       const badge = document.createElement("span");
-      badge.classList.add("");
+      badge.classList.add("badge");
 
       if (globalIndex === 0) {
-         badge.classList.add("");
+         badge.classList.add("gold-badge");
          badge.textContent = "";
       } else if (globalIndex === 1) {
-         badge.classList.add("");
+         badge.classList.add("silver-badge");
          badge.textContent = "";
       } else if (globalIndex === 2) {
-         badge.classList.add("");
+         badge.classList.add("bronze-badge");
          badge.textContent = "";
       }
 
