@@ -312,10 +312,10 @@ body {
 
 .points {
    font-size: 18px;
-   color: #0f0;
+   color: white;
 }
 
-.badge {
+/*.badge {
    padding: 5px 10px;
    font-weight: bold;
    color: white;
@@ -335,7 +335,7 @@ body {
 .bronze-badge {
    background-color: #cd7f32;
 }
-
+*/
 .pagination {
    display: flex;
    justify-content: center;
