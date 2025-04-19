@@ -155,7 +155,7 @@ function displayLeaderboard() {
       entry.style.animationDelay = `${index * 0.2}s`;
 
       // Add rankings and badges
-      if (globalIndex === 0) entry.classList.add("gold");
+      /*if (globalIndex === 0) entry.classList.add("gold");
       else if (globalIndex === 1) entry.classList.add("silver");
       else if (globalIndex === 2) entry.classList.add("bronze");
 
@@ -171,7 +171,7 @@ function displayLeaderboard() {
       } else if (globalIndex === 2) {
          badge.classList.add("bronze-badge");
          badge.textContent = "Bronze";
-      }
+      }*/
 
       const logo = document.createElement("img");
       logo.src = member.logo;
